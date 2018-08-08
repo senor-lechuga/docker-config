@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: ["./lib/docker/run.sh", "bundle exec rails s"]
+    volumes:
+      - .:/app
+      - web_gems:/rubygems
+    environment:
+      GEM_HOME: /rubygems
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+volumes:
+  web_gems:
