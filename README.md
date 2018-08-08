@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The most basic set up application, using docker in conjunction with rails.
+The following steps can be taken to create both the docker config, and generate a basic rails application.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Create a Gemfile with: `source 'https://rubygems.org'\n
+gem 'rails', '~> 5.2.0'`
